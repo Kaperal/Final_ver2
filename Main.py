@@ -131,9 +131,7 @@ class CCTVApp:
 
         # Initialize YOLO model
         self.model = YOLO("Model/best.pt")
-        self.classNames = ["Above", "Chair", "Door", "Fan", "Human", "TV", "Wall",
-                           "broomstick", "cabinet", "chair", "dad", "door", "fan",
-                           "microwave", "mom", "ref", "sister", "stairs", "table"
+        self.classNames = ['Assault_weapon', 'Blunt-objects', 'Handguns', 'Knives', 'SMG', 'Shotgun'
                           ]
 
         # Prepare for result saving
@@ -224,7 +222,7 @@ class CCTVApp:
             ret, frame = self.cap.read()
             if ret:
                 # Perform YOLO detection
-                results = self.model(frame, stream=True, imgsz=320)
+                results = self.model(frame, stream=True, imgsz=640)
 
                 for r in results:
                     boxes = r.boxes
