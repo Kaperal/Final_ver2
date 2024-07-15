@@ -244,7 +244,7 @@ class CCTVApp:
 
                         # put label on frame
                         cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
-
+                        #
                         # Increment the detected number
                         self.detected_number += 1
                         if self.detected_number > 3 and self.text_system_gate == 0 and self.text_system_active:
