@@ -66,7 +66,7 @@ class CCTVApp:
         self.port_var = tk.StringVar()
         self.port_dropdown = ttk.Combobox(self.right_frame, textvariable=self.port_var)
         self.port_dropdown['values'] = self.available_ports
-        self.port_dropdown.current(0)  # Set the default selection to the first port
+        self.port_dropdown.current()  # Set the default selection to the first port
         self.port_dropdown.pack(pady=10)
 
         # Create a label for the port dropdown menu
